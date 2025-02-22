@@ -24,6 +24,12 @@ function App() {
     changeTitle(newTitles);
   }
 
+  function btnClick(e) {
+    alert("button clicked!");
+    console.log(e);
+    console.log(e.target.name);
+  }
+
 
   return (
     <div className="App">
@@ -54,6 +60,13 @@ function App() {
 
 
       <div style={{ marginTop: "20px" }}><button onClick={ changeTitleFunc }>오름차순 정렬</button></div>
+
+      <div>
+        <button name="test btn" onClick={btnClick}>
+          Click Me!
+        </button>
+      </div>
+
       <div className="list">
         <h3> { title[0] } <span className="like" onClick={ ()=>{ changeCount(count + 1) } }>😍</span> { count } </h3>
         <p>2월 4일 발행</p>
